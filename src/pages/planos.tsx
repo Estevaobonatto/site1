@@ -44,7 +44,7 @@ const Planos = () => {
         </div>
         <PlanosComparativo />
       </div>
-      <div className="mt-100">
+      <div className="mt-32">
         <Footer />
       </div>
     </div>

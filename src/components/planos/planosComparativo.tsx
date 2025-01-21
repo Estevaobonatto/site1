@@ -1,5 +1,5 @@
 import React from 'react';
-import { Check, X } from '@phosphor-icons/react';
+import { Check, X, Star } from '@phosphor-icons/react';
 import { Link } from 'react-router-dom';
 
 interface PlanoFeature {
@@ -68,18 +68,30 @@ const PlanosComparativo = () => {
         <table className="w-full">
           <thead>
             <tr className="border-b border-[#1A0B38]">
-              <th className="p-4 text-left text-gray-400">Recursos</th>
-              <th className="p-4 text-center text-purple-600">
-                <span className="block text-xl font-bold">BÁSICO</span>
-                <span className="block text-lg">R$ 89,90/mês</span>
+              <th className="p-4 text-left text-gray-400 w-1/4">Recursos</th>
+              <th className="p-4 w-1/4">
+                <div className="bg-gray-900/50 backdrop-blur-sm border border-purple-600/20 rounded-2xl p-6 transform transition-transform hover:scale-105">
+                  <span className="block text-xl font-bold text-purple-400">BÁSICO</span>
+                  <span className="block text-3xl font-bold text-white mt-2">R$ 89,90</span>
+                  <span className="block text-sm text-gray-400 mt-1">/mês</span>
+                </div>
               </th>
-              <th className="p-4 text-center text-purple-600">
-                <span className="block text-xl font-bold">PREMIUM</span>
-                <span className="block text-lg">R$ 129,90/mês</span>
+              <th className="p-4 w-1/4">
+                <div className="bg-gray-900/50 backdrop-blur-sm border border-purple-600/20 rounded-2xl p-6 transform transition-transform hover:scale-105 relative">
+                  <div className="absolute -top-2 left-1/2 transform -translate-x-1/2 bg-purple-600/80 text-white text-xs px-3 py-0.5 rounded-full">
+                    Mais Popular
+                  </div>
+                  <span className="block text-xl font-bold text-purple-400">PREMIUM</span>
+                  <span className="block text-3xl font-bold text-white mt-2">R$ 129,90</span>
+                  <span className="block text-sm text-gray-400 mt-1">/mês</span>
+                </div>
               </th>
-              <th className="p-4 text-center text-purple-600">
-                <span className="block text-xl font-bold">BLACK</span>
-                <span className="block text-lg">R$ 199,90/mês</span>
+              <th className="p-4 w-1/4">
+                <div className="bg-gray-900/50 backdrop-blur-sm border border-purple-600/20 rounded-2xl p-6 transform transition-transform hover:scale-105">
+                  <span className="block text-xl font-bold text-purple-400">BLACK</span>
+                  <span className="block text-3xl font-bold text-white mt-2">R$ 199,90</span>
+                  <span className="block text-sm text-gray-400 mt-1">/mês</span>
+                </div>
               </th>
             </tr>
           </thead>
@@ -94,23 +106,23 @@ const PlanosComparativo = () => {
                 <td className="p-4 text-gray-300">{feature.name}</td>
                 <td className="p-4 text-center">
                   {feature.basico ? (
-                    <Check className="mx-auto text-green-500" size={24} />
+                    <Check weight="bold" className="mx-auto text-green-500" size={24} />
                   ) : (
-                    <X className="mx-auto text-red-500" size={24} />
+                    <X weight="bold" className="mx-auto text-red-500" size={24} />
                   )}
                 </td>
                 <td className="p-4 text-center">
                   {feature.premium ? (
-                    <Check className="mx-auto text-green-500" size={24} />
+                    <Check weight="bold" className="mx-auto text-green-500" size={24} />
                   ) : (
-                    <X className="mx-auto text-red-500" size={24} />
+                    <X weight="bold" className="mx-auto text-red-500" size={24} />
                   )}
                 </td>
                 <td className="p-4 text-center">
                   {feature.black ? (
-                    <Check className="mx-auto text-green-500" size={24} />
+                    <Check weight="bold" className="mx-auto text-green-500" size={24} />
                   ) : (
-                    <X className="mx-auto text-red-500" size={24} />
+                    <X weight="bold" className="mx-auto text-red-500" size={24} />
                   )}
                 </td>
               </tr>
