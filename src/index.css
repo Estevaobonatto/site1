@@ -20,3 +20,30 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+/*
+  Cores do Projeto:
+
+  -- Cores de Fundo --
+  bg-[#151515]     -> Cinza escuro (fundo principal)
+  bg-[#110726]     -> Roxo escuro médio (fundo alternado da tabela)
+  bg-[#1A0B38]     -> Roxo escuro claro (bordas)
+  
+  -- Cores de Destaque --
+  text-purple-600  -> Roxo principal (#7C3AED) - usado em títulos e destaques
+  text-purple-700  -> Roxo escuro (#6D28D9) - hover em botões
+  text-purple-800  -> Roxo mais escuro (#5B21B6) - preços
+  
+  -- Cores de Texto --
+  text-white       -> Branco (#FFFFFF) - texto principal
+  text-gray-300    -> Cinza claro (#D1D5DB) - texto secundário
+  text-gray-400    -> Cinza médio (#9CA3AF) - texto terciário
+  
+  -- Cores de Status --
+  text-green-500   -> Verde (#22C55E) - ícones de check
+  text-red-500     -> Vermelho (#EF4444) - ícones de X
+  
+  -- Transparências --
+  bg-[#110726]/50  -> Roxo escuro com 50% de opacidade (linhas da tabela)
+  bg-purple-600/90 -> Roxo principal com 90% de opacidade (navbar)
+*/

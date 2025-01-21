@@ -1,9 +1,11 @@
 import React from 'react';
 import Card from '../components/card/card';
+import PlanosComparativo from '../components/planos/planosComparativo';
+import Footer from '../components/footer/footer';
 
 const Planos = () => {
   return (
-    <div className="min-h-screen bg-gray-100 py-12">
+    <div className="min-h-screen bg-[#151515] text-white pt-24">
       <div className="container mx-auto px-4">
         <h1 className="text-4xl font-bold text-purple-600 mb-12 text-center">Nossos Planos</h1>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -40,8 +42,13 @@ const Planos = () => {
             ]}
           />
         </div>
+        <PlanosComparativo />
+      </div>
+      <div className="mt-100">
+        <Footer />
       </div>
     </div>
+    
   );
 };
 

@@ -597,16 +597,16 @@ html {
   position: relative;
 }
 
+.bottom-8{
+  bottom: 2rem;
+}
+
 .left-1\/2{
   left: 50%;
 }
 
 .top-4{
   top: 1rem;
-}
-
-.bottom-8{
-  bottom: 2rem;
 }
 
 .z-50{
@@ -642,20 +642,56 @@ html {
   margin-right: 0.5rem;
 }
 
+.mt-16{
+  margin-top: 4rem;
+}
+
 .mt-2{
   margin-top: 0.5rem;
 }
 
-.mr-5{
-  margin-right: 1.25rem;
+.mt-8{
+  margin-top: 2rem;
+}
+
+.mt-auto{
+  margin-top: auto;
+}
+
+.mt-4{
+  margin-top: 1rem;
+}
+
+.mt-12{
+  margin-top: 3rem;
+}
+
+.mt-10{
+  margin-top: 2.5rem;
+}
+
+.mt-5{
+  margin-top: 1.25rem;
+}
+
+.mt-3{
+  margin-top: 0.75rem;
 }
 
 .block{
   display: block;
 }
 
+.inline-block{
+  display: inline-block;
+}
+
 .flex{
   display: flex;
+}
+
+.table{
+  display: table;
 }
 
 .grid{
@@ -670,6 +706,18 @@ html {
   height: 100vh;
 }
 
+.h-48{
+  height: 12rem;
+}
+
+.h-72{
+  height: 18rem;
+}
+
+.h-full{
+  height: 100%;
+}
+
 .min-h-screen{
   min-height: 100vh;
 }
@@ -680,6 +728,18 @@ html {
 
 .max-w-2xl{
   max-width: 42rem;
+}
+
+.max-w-6xl{
+  max-width: 72rem;
+}
+
+.flex-1{
+  flex: 1 1 0%;
+}
+
+.flex-auto{
+  flex: 1 1 auto;
 }
 
 .-translate-x-1\/2{
@@ -715,12 +775,26 @@ html {
   grid-template-columns: repeat(1, minmax(0, 1fr));
 }
 
+.flex-col{
+  flex-direction: column;
+}
+
 .items-center{
   align-items: center;
 }
 
+.gap-2{
+  gap: 0.5rem;
+}
+
 .gap-8{
   gap: 2rem;
+}
+
+.space-x-4 > :not([hidden]) ~ :not([hidden]){
+  --tw-space-x-reverse: 0;
+  margin-right: calc(1rem * var(--tw-space-x-reverse));
+  margin-left: calc(1rem * calc(1 - var(--tw-space-x-reverse)));
 }
 
 .space-x-8 > :not([hidden]) ~ :not([hidden]){
@@ -741,8 +815,12 @@ html {
   margin-bottom: calc(1rem * var(--tw-space-y-reverse));
 }
 
-.rounded{
-  border-radius: 0.25rem;
+.overflow-x-auto{
+  overflow-x: auto;
+}
+
+.rounded-3xl{
+  border-radius: 1.5rem;
 }
 
 .rounded-full{
@@ -753,10 +831,6 @@ html {
   border-radius: 0.5rem;
 }
 
-.rounded-3xl{
-  border-radius: 1.5rem;
-}
-
 .rounded-2xl{
   border-radius: 1rem;
 }
@@ -765,9 +839,36 @@ html {
   border-width: 1px;
 }
 
+.border-b{
+  border-bottom-width: 1px;
+}
+
+.border-t{
+  border-top-width: 1px;
+}
+
+.border-\[\#1A0B38\]{
+  --tw-border-opacity: 1;
+  border-color: rgb(26 11 56 / var(--tw-border-opacity, 1));
+}
+
 .border-gray-300{
   --tw-border-opacity: 1;
   border-color: rgb(209 213 219 / var(--tw-border-opacity, 1));
+}
+
+.border-gray-800{
+  --tw-border-opacity: 1;
+  border-color: rgb(31 41 55 / var(--tw-border-opacity, 1));
+}
+
+.bg-\[\#110726\]\/50{
+  background-color: rgb(17 7 38 / 0.5);
+}
+
+.bg-\[\#151515\]{
+  --tw-bg-opacity: 1;
+  background-color: rgb(21 21 21 / var(--tw-bg-opacity, 1));
 }
 
 .bg-gray-100{
@@ -780,22 +881,14 @@ html {
   background-color: rgb(249 250 251 / var(--tw-bg-opacity, 1));
 }
 
+.bg-gray-900{
+  --tw-bg-opacity: 1;
+  background-color: rgb(17 24 39 / var(--tw-bg-opacity, 1));
+}
+
 .bg-purple-600{
   --tw-bg-opacity: 1;
   background-color: rgb(124 58 237 / var(--tw-bg-opacity, 1));
-}
-
-.bg-purple-600\/90{
-  background-color: rgb(124 58 237 / 0.9);
-}
-
-.bg-white{
-  --tw-bg-opacity: 1;
-  background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
-}
-
-.bg-purple-900\/90{
-  background-color: rgb(88 28 135 / 0.9);
 }
 
 .bg-purple-700{
@@ -803,8 +896,21 @@ html {
   background-color: rgb(109 40 217 / var(--tw-bg-opacity, 1));
 }
 
+.bg-white{
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
+}
+
+.object-cover{
+  object-fit: cover;
+}
+
 .p-2{
   padding: 0.5rem;
+}
+
+.p-4{
+  padding: 1rem;
 }
 
 .p-6{
@@ -840,16 +946,6 @@ html {
   padding-bottom: 4rem;
 }
 
-.py-2{
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-}
-
-.py-20{
-  padding-top: 5rem;
-  padding-bottom: 5rem;
-}
-
 .py-3{
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
@@ -858,6 +954,23 @@ html {
 .py-4{
   padding-top: 1rem;
   padding-bottom: 1rem;
+}
+
+.px-12{
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
+
+.pt-24{
+  padding-top: 6rem;
+}
+
+.pt-8{
+  padding-top: 2rem;
+}
+
+.text-left{
+  text-align: left;
 }
 
 .text-center{
@@ -884,8 +997,28 @@ html {
   line-height: 1;
 }
 
+.text-lg{
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+
+.text-xl{
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
 .font-bold{
   font-weight: 700;
+}
+
+.text-gray-300{
+  --tw-text-opacity: 1;
+  color: rgb(209 213 219 / var(--tw-text-opacity, 1));
+}
+
+.text-gray-400{
+  --tw-text-opacity: 1;
+  color: rgb(156 163 175 / var(--tw-text-opacity, 1));
 }
 
 .text-gray-600{
@@ -898,6 +1031,11 @@ html {
   color: rgb(55 65 81 / var(--tw-text-opacity, 1));
 }
 
+.text-green-500{
+  --tw-text-opacity: 1;
+  color: rgb(34 197 94 / var(--tw-text-opacity, 1));
+}
+
 .text-purple-600{
   --tw-text-opacity: 1;
   color: rgb(124 58 237 / var(--tw-text-opacity, 1));
@@ -906,6 +1044,11 @@ html {
 .text-purple-800{
   --tw-text-opacity: 1;
   color: rgb(91 33 182 / var(--tw-text-opacity, 1));
+}
+
+.text-red-500{
+  --tw-text-opacity: 1;
+  color: rgb(239 68 68 / var(--tw-text-opacity, 1));
 }
 
 .text-white{
@@ -956,6 +1099,33 @@ code {
     monospace;
 }
 
+/*
+  Cores do Projeto:
+
+  -- Cores de Fundo --
+  bg-[#151515]     -> Cinza escuro (fundo principal)
+  bg-[#110726]     -> Roxo escuro médio (fundo alternado da tabela)
+  bg-[#1A0B38]     -> Roxo escuro claro (bordas)
+  
+  -- Cores de Destaque --
+  text-purple-600  -> Roxo principal (#7C3AED) - usado em títulos e destaques
+  text-purple-700  -> Roxo escuro (#6D28D9) - hover em botões
+  text-purple-800  -> Roxo mais escuro (#5B21B6) - preços
+  
+  -- Cores de Texto --
+  text-white       -> Branco (#FFFFFF) - texto principal
+  text-gray-300    -> Cinza claro (#D1D5DB) - texto secundário
+  text-gray-400    -> Cinza médio (#9CA3AF) - texto terciário
+  
+  -- Cores de Status --
+  text-green-500   -> Verde (#22C55E) - ícones de check
+  text-red-500     -> Vermelho (#EF4444) - ícones de X
+  
+  -- Transparências --
+  bg-[#110726]/50  -> Roxo escuro com 50% de opacidade (linhas da tabela)
+  bg-purple-600/90 -> Roxo principal com 90% de opacidade (navbar)
+*/
+
 .hover\:scale-105:hover{
   --tw-scale-x: 1.05;
   --tw-scale-y: 1.05;
@@ -978,8 +1148,17 @@ code {
   color: rgb(233 213 255 / var(--tw-text-opacity, 1));
 }
 
+.hover\:text-white:hover{
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity, 1));
+}
+
 @media (min-width: 768px){
   .md\:grid-cols-3{
     grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .md\:grid-cols-4{
+    grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 }
