@@ -1,0 +1,44 @@
+/* Estilização da barra de rolagem para navegadores WebKit (Chrome, Safari, etc) */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #151515;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(124, 58, 237, 0.3);
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(124, 58, 237, 0.5);
+}
+
+/* Estilização para Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(124, 58, 237, 0.3) #151515;
+}
+
+/* Estilização específica para a tabela de comparação de planos */
+.overflow-x-auto::-webkit-scrollbar {
+  height: 6px;
+}
+
+.overflow-x-auto::-webkit-scrollbar-track {
+  background: rgba(21, 21, 21, 0.5);
+  border-radius: 3px;
+}
+
+.overflow-x-auto::-webkit-scrollbar-thumb {
+  background: rgba(124, 58, 237, 0.2);
+  border-radius: 3px;
+}
+
+.overflow-x-auto::-webkit-scrollbar-thumb:hover {
+  background: rgba(124, 58, 237, 0.4);
+} 

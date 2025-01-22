@@ -7,6 +7,7 @@ import Planos from './pages/planos';
 import Sobre from './pages/about';
 import Contato from './pages/contact';
 import { useScrollToTop } from './hooks/useScrollToTop';
+import './styles/global.css';
 
 function AppContent() {
   useScrollToTop();

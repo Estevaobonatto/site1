@@ -10,12 +10,12 @@ const Titulo = () => {
   };
 
   return (
-    <section className="bg-black-600 text-white h-screen flex flex-col items-center justify-center relative">
+    <section className="bg-black-600 text-white h-screen flex flex-col items-center justify-center relative px-4">
       <div className="container mx-auto text-center">
-        <h1 className="text-5xl font-bold mb-6 text-purple-600">
+        <h1 className="text-4xl md:text-5xl font-bold mb-6 text-purple-600">
           POWER GYM
         </h1>
-        <span className="block text-2xl mt-2">SUA ACADEMIA MAIS PROFISSIONAL</span>
+        <span className="block text-xl md:text-2xl mt-2">SUA ACADEMIA MAIS PROFISSIONAL</span>
       </div>
       
       <button 

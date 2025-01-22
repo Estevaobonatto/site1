@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Form from '../components/form/form';
 import Footer from '../components/footer/footer';
 import { Phone, Envelope, MapPin, Clock, InstagramLogo, FacebookLogo } from '@phosphor-icons/react';
+import { AnimatedSection } from '../components/animations/AnimatedSection';
 
 const ContatoCard = ({ icon: Icon, titulo, conteudo }: { icon: any, titulo: string, conteudo: string }) => (
   <div className="bg-gray-900/50 p-6 rounded-2xl backdrop-blur-sm border border-purple-600/20 hover:border-purple-600/50 transition-colors duration-300">
@@ -29,59 +30,67 @@ const SocialButton = ({ icon: Icon, href }: { icon: any, href: string }) => (
 );
 
 const Contato = () => {
-  React.useEffect(() => {
+  useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
   return (
     <div className="min-h-screen bg-[#151515] text-white pt-24">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold text-purple-600 mb-4 mt-12">Entre em Contato</h1>
-          <p className="text-gray-400 max-w-2xl mx-auto">
-            Estamos aqui para ajudar! Entre em contato conosco através de qualquer um dos canais abaixo 
-            ou preencha o formulário que retornaremos o mais breve possível.
-          </p>
-        </div>
+        <AnimatedSection>
+          <div className="text-center mb-12">
+            <h1 className="text-4xl font-bold text-purple-600 mb-4 mt-12">Entre em Contato</h1>
+            <p className="text-gray-400 max-w-2xl mx-auto">
+              Estamos aqui para ajudar! Entre em contato conosco através de qualquer um dos canais abaixo 
+              ou preencha o formulário que retornaremos o mais breve possível.
+            </p>
+          </div>
+        </AnimatedSection>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-          <ContatoCard 
-            icon={Phone}
-            titulo="Telefone"
-            conteudo="(11) 99999-9999"
-          />
-          <ContatoCard 
-            icon={Envelope}
-            titulo="Email"
-            conteudo="contato@powergym.com"
-          />
-          <ContatoCard 
-            icon={MapPin}
-            titulo="Endereço"
-            conteudo="Rua Exemplo, 123 - SP"
-          />
-          <ContatoCard 
-            icon={Clock}
-            titulo="Horário"
-            conteudo="Seg-Sex: 6h-22h"
-          />
-        </div>
+        <AnimatedSection delay={200}>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+            <ContatoCard 
+              icon={Phone}
+              titulo="Telefone"
+              conteudo="(11) 99999-9999"
+            />
+            <ContatoCard 
+              icon={Envelope}
+              titulo="Email"
+              conteudo="contato@powergym.com"
+            />
+            <ContatoCard 
+              icon={MapPin}
+              titulo="Endereço"
+              conteudo="Rua Exemplo, 123 - SP"
+            />
+            <ContatoCard 
+              icon={Clock}
+              titulo="Horário"
+              conteudo="Seg-Sex: 6h-22h"
+            />
+          </div>
+        </AnimatedSection>
 
-        <div className="flex justify-center gap-4 mb-12">
-          <SocialButton 
-            icon={InstagramLogo}
-            href="https://instagram.com"
-          />
-          <SocialButton 
-            icon={FacebookLogo}
-            href="https://facebook.com"
-          />
-        </div>
+        <AnimatedSection delay={300}>
+          <div className="flex justify-center gap-4 mb-12">
+            <SocialButton 
+              icon={InstagramLogo}
+              href="https://instagram.com"
+            />
+            <SocialButton 
+              icon={FacebookLogo}
+              href="https://facebook.com"
+            />
+          </div>
+        </AnimatedSection>
 
-        <div className="max-w-2xl mx-auto bg-gray-900/50 p-8 rounded-3xl backdrop-blur-sm border border-purple-600/20">
-          <h2 className="text-2xl font-bold text-center text-purple-600 mb-8">Envie sua Mensagem</h2>
-          <Form />
-        </div>
+        <AnimatedSection delay={400}>
+          <div className="max-w-2xl mx-auto bg-gray-900/50 p-8 rounded-3xl backdrop-blur-sm border border-purple-600/20">
+            <h2 className="text-2xl font-bold text-center text-purple-600 mb-8">Envie sua Mensagem</h2>
+            <Form />
+          </div>
+        </AnimatedSection>
       </div>
       <div className="mt-20">
         <Footer />
