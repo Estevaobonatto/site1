@@ -6,7 +6,12 @@ import Localizacao from '../components/localizacao/localizacao';
 import PlanosSection from '../components/planos/planosSection';
 import ContatoSection from '../components/contato/contatoSection';
 import Footer from '../components/footer/footer';
+
 const Home = () => {
+  React.useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div className="flex flex-col bg-[#151515] text-white">
       <Titulo />
@@ -18,7 +23,6 @@ const Home = () => {
       <div className="mt-100">
         <Footer />
       </div>
-
     </div>
   );
 };

@@ -10,6 +10,11 @@ interface ImagemProps {
   descricao: string;
 }
 
+interface ImagensSectionProps {
+  showTitle?: boolean;
+  reducedPadding?: boolean;
+}
+
 const ImagemCard = ({ src, alt, titulo, descricao }: ImagemProps) => (
   <div className="relative group overflow-hidden rounded-3xl shadow-lg">
     <img 
@@ -26,7 +31,7 @@ const ImagemCard = ({ src, alt, titulo, descricao }: ImagemProps) => (
   </div>
 );
 
-const ImagensSection = () => {
+const ImagensSection = ({ showTitle = true, reducedPadding = false }: ImagensSectionProps) => {
   const imagens: ImagemProps[] = [
     {
       src: academia1,
@@ -49,9 +54,11 @@ const ImagensSection = () => {
   ];
 
   return (
-    <section className="py-16 bg-[#151515]">
+    <section className={`${reducedPadding ? 'py-4' : 'py-16'} bg-[#151515]`}>
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center text-purple-600 mb-12">NOSSA ESTRUTURA</h2>
+        {showTitle && (
+          <h2 className="text-3xl font-bold text-center text-purple-600 mb-12">NOSSA ESTRUTURA</h2>
+        )}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {imagens.map((imagem, index) => (
             <ImagemCard key={index} {...imagem} />

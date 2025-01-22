@@ -4,10 +4,14 @@ import PlanosComparativo from '../components/planos/planosComparativo';
 import Footer from '../components/footer/footer';
 
 const Planos = () => {
+  React.useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div className="min-h-screen bg-[#151515] text-white pt-24">
       <div className="container mx-auto px-4">
-        <h1 className="text-4xl font-bold text-purple-600 mb-12 text-center">Nossos Planos</h1>
+        <h1 className="text-4xl font-bold text-purple-600 mb-12 mt-12 text-center">Nossos Planos</h1>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <Card 
             titulo="BÁSICO"
